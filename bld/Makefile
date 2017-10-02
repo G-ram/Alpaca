@@ -1,6 +1,10 @@
 EXEC = $(SRC)
+SRC_ROOT = ../../src
+SRC_FILES = $(SRC_ROOT)/$(TOOL)/$(EXEC)
 OBJECTS = \
-    main_$(SRC)_$(TOOL).o 
+        $(patsubst %.c,%.o,$(wildcard $(SRC_FILES)/*.c)) \
+
+$(info $(OBJECTS))
 
 DEPS += \
 	libmsp \
@@ -19,11 +23,13 @@ DEPS += \
 #ifeq ($(TOOLCHAIN), clang)
 #SRC_ROOT = ../../src_dino
 #endif
-SRC_ROOT = ../../src
 
 include $(LIB_ROOT)/libmspbuiltins/bld/Makefile.target
 
 ifeq ($(BOARD), mspts430)
+CONFIG_PRINTF_LIB = libmspconsole
+endif
+ifeq ($(BOARD), fr5994)
 CONFIG_PRINTF_LIB = libmspconsole
 endif
 ifeq ($(BOARD), wisp)

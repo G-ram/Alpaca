@@ -1498,7 +1498,7 @@ void UART_init(void) {
 #endif // UART_BAUDRATE
 #endif // UART_CLOCK
 
-#if defined(__MSP430FR5969__) || defined(__MSP430FR5949__)
+#if defined(__MSP430FR5969__) || defined(__MSP430FR5949__) || defined(__MSP430FR5994__)
     PUART_TXSEL0 &= ~PIN_UART_TX; // TX pin to UART module
     4ffc:	d2 c3 0b 02 	bic.b	#1,	&0x020b	;r3 As==01
     PUART_TXSEL1 |= PIN_UART_TX;
@@ -16268,7 +16268,7 @@ void UART_init(void) {
 #endif // UART_BAUDRATE
 #endif // UART_CLOCK
 
-#if defined(__MSP430FR5969__) || defined(__MSP430FR5949__)
+#if defined(__MSP430FR5969__) || defined(__MSP430FR5949__) || defined(__MSP430FR5994__)
     PUART_TXSEL0 &= ~PIN_UART_TX; // TX pin to UART module
     4f1e:	d2 c3 0b 02 	bic.b	#1,	&0x020b	;r3 As==01
     PUART_TXSEL1 |= PIN_UART_TX;

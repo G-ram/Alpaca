@@ -15,6 +15,8 @@
 #  include <libmementos/f2618.h>
 #elif defined(__MSP430FR5969__)
 #  include <libmementos/fr5969.h>
+#elif defined(__MSP430FR5994__)
+#  include <libmementos/fr5994.h>
 #elif defined(__MSP430FR6989__)
 #  include <libmementos/fr6989.h>
 #else
