@@ -43,3 +43,6 @@
 	path = ext/alpaca
     url = https://github.com/CMUAbstract/alpaca-oopsla
 #	url = git@github.com:CMUAbstract/alpaca-oopsla.git
+[submodule "src/alpaca/lenet"]
+	path = src/alpaca/lenet
+	url = git@github.com:CMUAbstract/lenet_alpaca.git
